@@ -118,6 +118,8 @@ describe('isExtglob', function () {
     assert(!isExtglob('aa'));
     assert(!isExtglob('abc.js'));
     assert(!isExtglob('abc/def/ghi.js'));
+    assert(!isExtglob('[a@(x)]'));
+    assert(!isExtglob('xyz/[a@(x)]/xyz'));
   });
 });
 
